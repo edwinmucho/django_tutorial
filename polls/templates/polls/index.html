@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if latest_question_list %}
+        <ul>
+            {% for question in latest_question_list %}
+                <!--polls.urls 에 서술된 URL 탐색 app_name='polls' 와 name='detail' 이 부분임 .-->
+                <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text}}</a></li>
+                <!--의존성이 강한 링크 Hard coding 된 상태 -->
+                <!--<li><a href="/polls/{{ question.id}}/">{{ question.question_text}}</a></li>-->
+            {% endfor%}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+</body>
+</html>
