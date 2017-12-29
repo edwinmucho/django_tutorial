@@ -1,8 +1,8 @@
-###python version : 3.6.4
-###Django version : 2.0
+### python version : 3.6.4
+### Django version : 2.0
 
 
-###장고 기본 명령어.
+### 장고 기본 명령어.
 -----
 * django-admin startproject [name]   - rails new [name] 이랑 비슷함.
 
